@@ -1,0 +1,15 @@
+mkdir my_tarball
+cd my_tarball
+echo "Any information about the author(s) of the project." > AUTHORS
+chmod 640 AUTHORS
+mkdir doc
+chmod 700 doc
+echo "Write at least 5 lines about permission system and commands." > doc/rights
+chmod 640 doc/rights
+mkdir src
+chmod 755 src
+echo '#!/bin/bash' > src/authors.sh
+chmod 644 src/authors.sh
+cd ..
+tar czf my_tarball.tar.gz my_tarball
+tar tf my_tarball.tar.gz
